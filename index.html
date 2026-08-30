@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+    name="description"
+    content="Calculate simple interest and compound interest quickly with our free online interest calculator.">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Interest Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="calculator">
+
+            <h1>Interest Calculator</h1>
+
+            <p class="subtitle">
+                Calculate Simple and Compound Interest
+            </p>
+
+            <div class="form-group">
+                <label for="principal">
+                    Principal Amount
+                </label>
+
+                <input
+                    type="number"
+                    id="principal"
+                    placeholder="Enter principal amount"
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="rate">
+                    Interest Rate (% per year)
+                </label>
+
+                <input
+                    type="number"
+                    id="rate"
+                    placeholder="Enter interest rate"
+                    step="0.01"
+                >
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="time">
+                    Time Period
+                </label>
+
+                <div class="time-input">
+
+                    <input
+                        type="number"
+                        id="time"
+                        placeholder="Enter time"
+                    >
+
+                    <select id="timeUnit">
+
+                        <option value="years">
+                            Years
+                        </option>
+
+                        <option value="months">
+                            Months
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Interest Type
+                </label>
+
+                <div class="radio-group">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="interestType"
+                            value="simple"
+                            checked
+                        >
+                        Simple Interest
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="interestType"
+                            value="compound"
+                        >
+                        Compound Interest
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="form-group"
+                id="compoundOptions"
+                style="display: none;"
+            >
+
+                <label for="frequency">
+                    Compounding Frequency
+                </label>
+
+                <select id="frequency">
+
+                    <option value="1">
+                        Annually
+                    </option>
+
+                    <option value="2">
+                        Half-Yearly
+                    </option>
+
+                    <option value="4">
+                        Quarterly
+                    </option>
+
+                    <option value="12">
+                        Monthly
+                    </option>
+
+                    <option value="365">
+                        Daily
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button id="calculateBtn">
+                Calculate
+            </button>
+
+            <button id="resetBtn" class="reset-button">
+                Reset
+            </button>
+
+            <div
+                class="result"
+                id="result"
+                style="display: none;"
+            >
+
+                <h2>Calculation Result</h2>
+
+                <div class="result-row">
+
+                    <span>Principal</span>
+
+                    <strong id="resultPrincipal">
+                        ₹0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="result-row">
+
+                    <span>Interest</span>
+
+                    <strong id="resultInterest">
+                        ₹0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="result-row total">
+
+                    <span>Total Amount</span>
+
+                    <strong id="resultTotal">
+                        ₹0.00
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
