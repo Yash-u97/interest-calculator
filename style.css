@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+}
+
+.container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 500px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group > label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.time-input {
+    display: flex;
+    gap: 10px;
+}
+
+.time-input input {
+    flex: 2;
+}
+
+.time-input select {
+    flex: 1;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group label {
+    font-weight: normal;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.radio-group input {
+    width: auto;
+}
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #222;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #444;
+}
+
+.result {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background: #f7f7f7;
+
+    border-radius: 8px;
+}
+
+.result h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.result-row.total {
+    border-bottom: none;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.reset-button {
+    margin-top: 10px;
+
+    background: #ddd;
+    color: #333;
+}
+
+.reset-button:hover {
+    background: #ccc;
+}
+
+@media (max-width: 500px) {
+
+    .calculator {
+        padding: 20px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .time-input {
+        flex-direction: column;
+    }
+}
